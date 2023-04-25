@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Word And Character Counter</h1>
+    <textarea  id="textbox" cols="30" rows="10"></textarea>
+    <p>
+        <span id="word">0</span> Words and <span id="char">0</span> Characters
+    </p>
+    <script>
+        let textbox=document.getElementById("textbox");
+
+        textbox.addEventListener('input',function()
+        {
+            var text=this.value;  //to get the value of text
+            let char=text.length;  //to calculate the length of the string which is entered and string is a array of characters
+
+            document.getElementById('char').innerHTML=char;
+
+            //character counts space
+            //but in words space is not counted
+            //so we will trim the extra space form beginning and end
+            //trim function removes extra space form starting and end
+            text=text.trim();
+
+            let words=text.split(" ");  //words is counted when the split function finds a single space
+
+            //we will now remove the counting of extra spaces in between words 
+            let cleanList=words.filter(function(element){
+                return element!="";
+            });
+
+            document.getElementById('word').innerHTML=cleanList.length;
+        });
+    </script>
+</body>
+</html>

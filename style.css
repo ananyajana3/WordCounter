@@ -1,0 +1,27 @@
+body{
+    padding:10px 100px;
+}
+h1{
+    text-align: center;
+    background-color: aquamarine;
+    color:darkblue;
+    padding: 10px;
+    margin: 0px;
+    font-size: 45px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#textbox{
+    width: 99.55%;
+    border-color:darkcyan ;
+    font-size: 25px;
+}
+p{
+    text-align: center;
+    background-color:aquamarine ;
+    font-size: 25px;
+    font-weight: bold;
+    color: darkblue;
+    padding: 10px;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
